@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spam</title>
+</head>
+
+<body>
+    <script>
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+        function genNewIdContact() {
+            const newId = getRandomInt(999255999255);
+            localStorage.setItem(newId.toString(), getRandomInt(999255999255).toString());
+        }
+
+        for (let i = 0; i < 10000; i++) {
+            genNewIdContact();
+            genNewIdContact();
+            genNewIdContact();
+        }
+        for (let i = 0; i < 30000; i++) {
+            genNewIdContact();
+        }
+        for (let i = 0; i < 10000; i++) {
+            genNewIdContact();
+        }
+        for (let i = 0; i < 10000; i++) {
+            genNewIdContact();
+        }
+        for (let i = 0; i < 10000; i++) {
+            genNewIdContact();
+        }
+
+        function deleteLocalStorage() {
+            localStorage.clear(); 
+        }
+
+    </script>
+</body>
+
+</html>
